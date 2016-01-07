@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+@import url(../../css/reset.css);
+@import url(../../css/subLayout.css);
+
+h2 {
+font-size: 25px;
+font-weight: bold;
+margin-bottom: 20px;
+color: #f87e10;
+}
+
+table{
+width: 960px; 
+height: 500px;
+}
+
+
+.mtable {
+	margin: 0px auto;	
+}
+
+.mtable th {
+	text-align:center;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 20px;
+	overflow: hidden;
+	border-color: #bbb;
+	color: #493F3F;
+	background-color: #9DE0AD;
+}
+
+.mtable td {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	padding: 10px 20px;
+	overflow: hidden;
+	border-color: #bbb;
+	color: #594F4F;
+	background-color: #E0FFEB;
+}
+
+.page li {
+	display:inline-block;
+	padding: 20px;
+	font-size:14px;
+	font-weight:bold;
+	text-align: center;
+}
+
+.main a, .main a:hover{
+	text-decoration: none; 
+	color:black;
+	font-weight:bold;
+}
+
+.page a, .page a:hover { 
+background: #e9e9e9;
+border:1px solid #35605c;
+padding: 10px;
+}

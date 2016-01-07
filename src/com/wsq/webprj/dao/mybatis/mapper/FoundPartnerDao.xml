@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wsq.webprj.dao.FoundPartnerDao">
+
+	<select id="getPartners" resultType="com.wsq.webprj.vo.FoundPartner">
+		SELECT * FROM FOUNDPARTNERVIEW WHERE COUNTRY=#{param1} AND NATIVE_LANGUAGE=#{param2} AND LEARNING_LANGUAGE=#{param3}
+	</select>
+	
+	<!-- 	<select id="getNotice" resultType="com.newlec.webprj.vo.Notice">
+		SELECT * FROM NOTICES WHERE CODE = #{code}
+	</select> -->
+	
+</mapper>

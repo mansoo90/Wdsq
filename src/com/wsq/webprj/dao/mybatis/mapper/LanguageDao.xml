@@ -5,23 +5,8 @@
 <mapper namespace="com.wsq.webprj.dao.LanguageDao">
 
 	<select id="getLanguages" resultType="com.wsq.webprj.vo.Language">
-		SELECT * FROM(SELECT ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM,
-		LANGUAGE.*FROM LANGUAGE WHERE ${param2} LIKE '%${param3}%') A
-		WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
+		SELECT LANGUAGE FROM LANGUAGE
 	</select>
-
-	<update id="update">
-		UPDATE LANGUAGE SET NAME = #{name}, PWD = #{pwd}, REGDATE = #{regDate}  WHERE MID= #{mid}
-	</update>
-	
-	<delete id="delete">
-		DELETE LANGUAGE WHERE MID= #{mid}
-	</delete>
-
-	<insert id="insert">
-		INSERT INTO LANGUAGE(MID, PWD, NAME) VALUES(#{mid}, #{pwd}, #{name})
-	</insert>
-
 </mapper>
 
 

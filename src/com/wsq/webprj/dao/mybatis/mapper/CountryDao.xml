@@ -5,22 +5,8 @@
 <mapper namespace="com.wsq.webprj.dao.CountryDao">
 
 	<select id="getCountries" resultType="com.wsq.webprj.vo.Country">
-		SELECT * FROM(SELECT ROW_NUMBER() OVER (ORDER BY REGDATE DESC) NUM,
-		COUNTRY.*FROM COUNTRY WHERE ${param2} LIKE '%${param3}%') A
-		WHERE NUM BETWEEN 1+(#{param1}-1)*10 AND #{param1}*10
+		SELECT COUNTRY FROM COUNTRY
 	</select>
-
-	<update id="update">
-		UPDATE COUNTRY SET NAME = #{name}, PWD = #{pwd}, REGDATE = #{regDate}  WHERE MID= #{mid}
-	</update>
-	
-	<delete id="delete">
-		DELETE COUNTRY WHERE MID= #{mid}
-	</delete>
-
-	<insert id="insert">
-		INSERT INTO COUNTRY(MID, PWD, NAME) VALUES(#{mid}, #{pwd}, #{name})
-	</insert>
 
 </mapper>
 

@@ -35,5 +35,7 @@
 	<bean name="myPartnerDao" class="com.wsq.webprj.dao.mybatis.MyBatisMyPartnerDao" />
 	<bean name="lLanguageDao" class="com.wsq.webprj.dao.mybatis.MyBatisLearningLanguageDao" />
 	<bean name="nLanguageDao" class="com.wsq.webprj.dao.mybatis.MyBatisNativeLanguageDao" />
-	
+	<bean name="foundPartnerDao" class="com.wsq.webprj.dao.mybatis.MyBatisFoundPartnerDao" />
+	<bean name="countryDao" class="com.wsq.webprj.dao.mybatis.MyBatisCountryDao" />
+	<bean name="languageDao" class="com.wsq.webprj.dao.mybatis.MyBatisLanguageDao" />
 </beans>

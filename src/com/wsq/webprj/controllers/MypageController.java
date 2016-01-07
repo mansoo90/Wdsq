@@ -59,9 +59,6 @@ public class MypageController {
 		List<MyPartner> friends_list = myPartnerDao.getWaitingList(id,"friend");
 		model.addAttribute("friends_list",friends_list);
 		
-		
-		
-		
 		/*System.out.println(mplist.size());
 		System.out.println(mplist.get(1).getMypartners_mid());*/
 		
@@ -73,8 +70,6 @@ public class MypageController {
 		
 		MemberProfile mp = profileDao.getProfile(id);	
 		model.addAttribute("mProfile", mp);
-		
-		
 		
 
 		return "mypage/mypage";
