@@ -1,5 +1,6 @@
 package com.wsq.webprj.controllers;
 
+import java.security.Principal;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -14,10 +15,12 @@ import com.wsq.webprj.dao.CountryDao;
 import com.wsq.webprj.dao.FoundPartnerDao;
 import com.wsq.webprj.dao.LanguageDao;
 import com.wsq.webprj.dao.MemberDao;
+import com.wsq.webprj.dao.MyPartnerViewDao;
 import com.wsq.webprj.vo.Country;
 import com.wsq.webprj.vo.FoundPartner;
 import com.wsq.webprj.vo.Language;
 import com.wsq.webprj.vo.Member;
+import com.wsq.webprj.vo.MyPartnerView;
 
 @Controller
 @RequestMapping("/partner/")
@@ -31,6 +34,8 @@ public class PartnerController {
 	private LanguageDao languageDao;
 	@Autowired
 	private FoundPartnerDao foundpartnerDao;
+	@Autowired
+	private MyPartnerViewDao mypartnerviewDao;
 	
 	//파인드 파트너 조건
 	@RequestMapping(value="findPartners", method=RequestMethod.GET)
@@ -64,11 +69,10 @@ public class PartnerController {
 	
 	// 내 파트너 목록
 	@RequestMapping(value="myPartnerList", method=RequestMethod.GET)
-	public String myPartnerList(Model model, String id, Authentication auth)
+	public String myPartnerList(Model model, Principal prin)
 	{
-		if(id==null)
-			id=auth.getName();
-		List<FoundPartner> list = foundpartnerDao.getmyPartners(id);
+		String id=prin.getName();
+		List<MyPartnerView> list = mypartnerviewDao.getMyPartners(id);
 		
 		model.addAttribute("list", list);
 		return "partner/myPartnerList";

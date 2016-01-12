@@ -38,4 +38,5 @@
 	<bean name="foundPartnerDao" class="com.wsq.webprj.dao.mybatis.MyBatisFoundPartnerDao" />
 	<bean name="countryDao" class="com.wsq.webprj.dao.mybatis.MyBatisCountryDao" />
 	<bean name="languageDao" class="com.wsq.webprj.dao.mybatis.MyBatisLanguageDao" />
+	<bean name="mypartnerviewDao" class="com.wsq.webprj.dao.mybatis.MyBatisMyPartnerViewDao" />
 </beans>

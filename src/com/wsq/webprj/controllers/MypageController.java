@@ -49,7 +49,6 @@ public class MypageController {
 		if(id==null)
 			id=auth.getName();
 		
-		
 		List<MyPartner> send_list = myPartnerDao.getWaitingList(id,"send");
 		model.addAttribute("send_list",send_list);
 		

@@ -16,7 +16,6 @@ public class WSQSuccessHandler implements AuthenticationSuccessHandler {
 			Authentication authentication) throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		System.out.println("인증 성공");
-
 	}
 
 }

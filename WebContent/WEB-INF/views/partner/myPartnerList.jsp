@@ -15,7 +15,7 @@ pageEncoding="UTF-8"%>
 		</tr>
 		<c:forEach var="p" items="${list}">
 			<tr>
-				<td><a href="../mypage/mypage?id=${p.member_mid}">${p.member_mid}</a></td>
+				<td><a href="../mypage/mypage?id=${p.mypartners_mid}">${p.mypartners_mid}</a></td>
 				<td>${p.email}</td>
 				<td>${p.native_language}</td>
 				<td>${p.learning_language}</td>
